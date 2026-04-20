@@ -1,12 +1,17 @@
 # This file majorly used for receiving the end points 
 
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="assets")
 
 # URL => End Point
 @app.route("/")
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html")
 
-app.run(debug=True)
+@app.route("/prime")
+def prime():
+    return "<p>Hello from Prime!</p>"
+
+if __name__ == "__main__":
+    app.run(debug=True)
