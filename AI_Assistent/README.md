@@ -1,1 +1,1 @@
-Creation of AI Assistent
+Creation of AI Assistent and deployed using Flask.
